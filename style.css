@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(50, 31, 89);
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.logo nav{
+    margin-top: 10px;
+}
+
+.logo nav ul li{
+    display: inline;
+    padding: 10px;
+}
+
+.logo nav li a{
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+
+.logo h3{
+    position: relative;
+    right: 150px;
+}
+
+.logo .login, .signup{
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    position: relative;
+    left: 150px;
+}
+
+.login{
+    background-color: rgb(36, 44, 90);
+    color: white;
+}
+.login:hover{
+    box-shadow: 0 0 10px #0f3865, 0 0 20px #4b6fbc;
+}
+
+.signup{
+    background-color: rgb(53, 97, 97);
+    color: white;
+}
+.signup:hover{
+    box-shadow: 0 0 10px #134347, 0 0 20px #321c4c;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap; /* Allows responsiveness on smaller screens */
+    color: white;
+}
+
+header {
+    font-size: 2rem;
+    font-weight: bold;
+    flex: 1;
+}
+
+.banner {
+    max-width: 100%;
+    height: auto;
+    width: 300px; /* Adjust width as needed */
+}
+
+.subheader {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+#btn {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #007bff;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}

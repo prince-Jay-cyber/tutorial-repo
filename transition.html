@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transitions & Animations</title>
+  <style>
+    body {
+      background-color: #1a1a2e;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: #e94560;
+      border-radius: 10px;
+      transition: transform 0.5s ease, background-color 0.3s ease;
+      animation: glow 2s infinite alternate;
+    }
+
+    .box:hover {
+      transform: scale(1.2) rotate(5deg);
+      background-color: #0f3460;
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 10px #e94560;
+      }
+      100% {
+        box-shadow: 0 0 30px #0f3460;
+      }
+    }
+
+    .btn {
+        padding: 10px 20px;
+        background: #007bff;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .btn:hover {
+        background: #0056b3;
+        transform: scale(1.1);
+    }
+
+    .card {
+        width: 200px;
+        height: 100px;
+        background: #4b6cb7;
+        color: white;
+        padding: 20px;
+        opacity: 0;
+        animation: fadeIn 2s ease-in forwards;
+    }
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    .glow-btn {
+        padding: 10px 20px;
+        background: #ff416c;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(255, 65, 108, 0.7);
+        }
+        70% {
+            box-shadow: 0 0 0 15px rgba(255, 65, 108, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(255, 65, 108, 0);
+        }
+    }
+
+    .slide-text {
+        position: relative;
+        left: -100%;
+        animation: slideIn 1s forwards ease-out;
+    }
+    @keyframes slideIn {
+        to {
+            left: 0;
+        }
+    }
+
+    .ball {
+        width: 50px;
+        height: 50px;
+        background: #00d1b2;
+        border-radius: 50%;
+        position: relative;
+        animation: bounce 1s ease infinite;
+    }
+    @keyframes bounce {
+        0%, 100% {
+            top: 0;
+        }
+        50% {
+            top: 100px;
+        }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <br>
+  <br>
+  <button class="btn">Hover Me</button>
+  <br>
+  <div class="card">I Fade In</div>
+  <br>
+  <button class="glow-btn">Get Started</button>
+  <br>
+
+  <h2 class="slide-text">Hello, World!</h2>
+  <br>
+  <div class="ball"></div>
+
+</body>
+</html>
